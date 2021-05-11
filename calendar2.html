@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+<style>
+html{
+	padding: 0;
+}
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;padding: 0;margin: 0}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #00b359;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+  padding: 15px;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #00b359;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close3:hover,
+.close3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	
+	
+	  
+      <a class="navbar-brand" href="mr_recycle.html">Mr.Recycle</a>
+	  <img class="card-img-top" src="img\aboutus.png" width="15%">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    
+
+    </div>
+  </div>
+</nav><br><br>
+	<div class="container">
+		<center><h1>Upcoming Campaigns </h1></center>
+	</div>
+<div class="month" >      
+  <ul>
+    <li class="prev"><a href="mr_recycle.html">&#10094;</a></li>
+    <li class="next"><a href="calendar.html">&#10095;</li>
+    <li>
+     February<br>
+      <span style="font-size:18px">2020</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li><span class="active" id="myBtn1">3</span></li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li><span class="active" id="myBtn2">22</span></li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li ><span class="active" id="myBtn3">27</span></li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+    <p color="blue">Venue:Lohegaon,Pune<br>5% to 10% Sale</p>
+  </div>
+
+</div>
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close2">&times;</span>
+    <p color="blue">Venue:Hadapsar,Pune<br>Purchase E-waste at Wholesale Rate</p>
+  </div>
+
+</div>
+<div id="myModal3" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close3">&times;</span>
+    <p color="blue">Venue:Koregaon,Pune<br>E-waste Recycle Awarness at School</p>
+  </div>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal1");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+//************2nd btn
+// Get the modal
+var modal = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close2")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+//**********3d btn
+// Get the modal
+var modal = document.getElementById("myModal3");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn3");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close3")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

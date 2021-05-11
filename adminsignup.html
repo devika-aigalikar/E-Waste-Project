@@ -1,0 +1,167 @@
+	<html>
+	<head>
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+<style>
+/* Full-width input fields */
+ input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+ input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.h1{color:white;}
+
+/* Set a style for all buttons */
+button {
+  background-color: #66ffb3;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color:  #66ffb3;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=Reset] {
+  background-color: #66ffb3;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.container {
+
+  width:30%;
+  border-radius: 7px;
+  background-color: 
+	 #00cc66;
+  padding: 10px;
+    margin-top: 30px;
+}
+</style>
+</head>
+	<body>
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	<img class="card-img-top" src="img\aboutus.png" width="15%">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	  
+      <a class="navbar-brand" href="mr_recycle.html">Mr.Recycle</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    
+
+    </div>
+  </div>
+</nav><br><br>
+	<div class="container">
+		 <form action="adminsignup.php" class="form-container" method="POST">
+			<center><h1 style="color:white">ADMIN SIGN UP</h1></center>
+			<br>
+			<center>
+			
+            <label for="email"><b>User Name </b></label>
+			<input type="text" placeholder="Enter Name" name="uname" required>           
+           <!-- </div>-->
+             <div class="for">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+               <br> <label>Email Address </label>
+                <input class="form-control" id="email" type="text" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address."  name="email">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+			<div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-4">
+                <br><label> New Password </label>
+                <input class="form-control" id="password" type="password" placeholder="Create Your New Password" required="required" data-validation-required-message="Please enter password."  name="password">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+			
+			<!--<div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+               <br> <label>Re-enter Password</label>
+                <input class="form-control" id="password" type="password" placeholder="Confirm Password" required="required" data-validation-required-message="Please enter password."  name="confirm">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>-->
+		
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Phone Number </label>
+                <input class="form-control" id="phone" type="text" placeholder="Mobile Number" required="required" data-validation-required-message="Please enter your mobile number." name="phone">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+			</center>
+            <div class="control-group">
+              
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+          <!--    <center><button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Submit</button></center> -->
+		  <center><button type="submit" class="btn">Sign Up</button>
+		   <button type="reset"  class="btn">Reset</button>	
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+</body>
+</html>
